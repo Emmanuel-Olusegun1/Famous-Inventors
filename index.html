@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventors & Data Sorting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-4xl mx-auto bg-white p-6 shadow-md rounded-lg">
+        <h1 class="text-2xl font-bold mb-4">Inventors & Data Sorting</h1>
+
+        <button id="toggleRawData" class="bg-gray-500 text-white px-4 py-2 rounded mb-2">Show Raw Data</button>
+        <div id="rawDataSection" class="hidden bg-gray-200 p-4 rounded-lg">
+            <h2 class="text-lg font-semibold">Raw Data</h2>
+
+            <!-- Inventors Table -->
+            <h3 class="font-bold mt-2">Inventors</h3>
+            <table class="w-full border-collapse border border-gray-300 mt-2">
+                <thead>
+                    <tr class="bg-gray-300">
+                        <th class="border border-gray-400 px-4 py-2">Name</th>
+                        <th class="border border-gray-400 px-4 py-2">Birth Year</th>
+                        <th class="border border-gray-400 px-4 py-2">Year Passed</th>
+                    </tr>
+                </thead>
+                <tbody id="rawInventors"></tbody>
+            </table>
+
+            <!-- People List (Original Order) -->
+            <h3 class="font-bold mt-4">People</h3>
+            <ul id="rawPeople" class="list-disc pl-6 bg-white p-2 rounded-lg"></ul>
+
+            <!-- Transportation List (Original Order) -->
+            <h3 class="font-bold mt-4">Transport Modes (Original Order)</h3>
+            <ul id="rawTransport" class="list-disc pl-6 bg-white p-2 rounded-lg"></ul>
+        </div>
+
+        <button id="loadData" class="bg-blue-500 text-white px-4 py-2 rounded mb-4">Load Processed Data</button>
+
+        <h2 class="text-xl font-semibold mt-4">1. Inventors Born in the 1500s</h2>
+        <ul id="fifteen" class="list-disc pl-6"></ul>
+
+        <h2 class="text-xl font-semibold mt-4">2. Full Names of Inventors</h2>
+        <ul id="fullNames" class="list-disc pl-6"></ul>
+
+        <h2 class="text-xl font-semibold mt-4">3. Inventors Sorted by Birth Year</h2>
+        <ul id="ordered" class="list-disc pl-6"></ul>
+
+        <h2 class="text-xl font-semibold mt-4">4. People Sorted Alphabetically</h2>
+<ul id="sortedPeople" class="list-disc pl-6"></ul>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
